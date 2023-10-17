@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Login | Digital Art Gallery </title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="loginpage.css">
+  <script src="https://kit.fontawesome.com/542cb8b844.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="login form">
+      <header>Digital Art Gallery Login</header>
+      <form action="/loginpage" method="post">
+        <i id="emailicon" class="fa-solid fa-envelope"></i>
+        <i class="fas fa-lock"></i>
+        <label for="emailInput"><input name="email" id="emailInput" type="text" placeholder="Enter your email"
+            autocomplete="email"></label>
+        <label for="passwordInput"><input name="pwd" id="passwordInput" type="password"
+            placeholder="Enter your password"></label>
+        <a href="#">Forgot Password?</a>
+        <input id="loginButton" type="submit" class="button" value="Login">
+      </form>
+      <div class="signup">
+        <span class="signup">Don't have an account?</span>
+        <label for="check"><a id="check" href="signuppage.html">Sign Up</a></label>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
