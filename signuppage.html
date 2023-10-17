@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | Digital Art Gallery</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="/favicon_io/site.webmanifest">
+  <link rel="stylesheet" href="signuppage.css">
+  <script src="https://kit.fontawesome.com/542cb8b844.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="form">
+      <header>Sign Up</header>
+      <form action="/signuppage" method="post">
+        <i id="emailicon" class="fa-solid fa-envelope"></i>
+        <i class="fas fa-user"></i>
+        <i class="fas fa-lock"></i>
+        <i class="fas fa-lock" id="l2"></i>
+        <label for="semail"><input name="email" id="semail" type="text" placeholder="Enter your email"
+            autocomplete="email"></label>
+        <label for="suname"><input name="uname" id="suname" type="text" placeholder="Enter your username"></label>
+        <label for="spwd"><input name="pwd" id="spwd" type="password" placeholder="Create a password"></label>
+        <label for="scpwd"><input name="cpwd" id="scpwd" type="password" placeholder="Confirm your password"></label>
+        <input id="sbtn" type="submit" class="button" value="Sign Up">
+      </form>
+      <div class="signup">
+        <span class="signup">Already have an account?</span>
+        <label for="check"><a href="index.html" id="check">Login</a></label>
+      </div>
+    </div>
+  </div>
+  {{!--
+  <script src="signuppage.js"></script>
+  <script src="homepage.js"></script> --}}
+</body>
+
+</html>
