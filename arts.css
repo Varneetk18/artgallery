@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  background: url("https://images.template.net/92645/free-rainbow-frame-background-w9e2q.jpg");
+  min-height: 100vh;
+  width: 100%;
+  background-size: contain;
+  background-color: #009dff;
+  backdrop-filter: blur(2px);
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.burger,
+.menu {
+  position: absolute;
+  transform: translate(0%,0%);
+}
+
+.burger {
+  position: sticky;
+  z-index: 4;
+  margin-top: -5%;
+  top: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  background-image: url("menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body.open .burger {
+  background-image: url("close.svg");
+}
+
+.background {
+  position: fixed;
+  z-index: 2;
+  top: 44px;
+  left: 44px;
+  aspect-ratio: 1 / 1;
+  translate: -50% -50%;
+  height: 88px;
+  background: #07030a;
+  border-radius: 50%;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+body.open .background {
+  height: 184vh;
+  opacity: 0.8;
+}
+
+.menu {
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.05s;
+}
+
+.menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 100px;
+  transform: translate(0%,58%);
+}
+
+body.open .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+body .menu nav:hover > a {
+  opacity: 0.25;
+}
+
+body .menu nav > a:hover {
+  opacity: 1;
+  translate: 8px 0;
+}
+
+.menu a {
+  position: relative;
+  color: #ffffff;
+  font-size: 2rem;
+  padding: 20px 0 10px 20px;
+  text-decoration: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -26px;
+  translate: 0 -50%;
+  margin-top: 2px;
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  opacity: 0;
+  rotate: 45deg;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  opacity: 1;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    translate: -30px 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+body.open .menu a {
+  opacity: 1;
+  animation: appear 0.35s backwards;
+}
+
+#userEmail{
+  position: sticky;
+  top: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: right;
+  letter-spacing: 1.5px;
+  margin-right: 0.5%;
+  z-index: 999;
+  }
+
+.lout{
+  margin-top: -0.5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: right;
+  margin-right: 0.4%;
+  z-index: 999;
+  }
+
+.lout a{
+  color: #0888ff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  }
+
+header{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 20vh;
+}
+
+.foot{
+  margin-top: auto;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  }
+
+.foot p{
+  font-size: 1.2rem;
+  color: #07030a;
+  font-weight: bolder;
+  letter-spacing: 0.05rem;
+  }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 50px;
+  column-gap: 100px;
+  margin-top: 5vh;
+  margin-left: 20vh;
+  margin-right: 20vh;
+}
+
+/* .card-body{
+  width: 300px;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 7px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  align-self: center;
+} */
+
+h5{
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+p{
+  font-size: 20px;
+}
+
+img{
+  margin-top: 0.7rem;
+  width: 100%;
+  height: auto;
+}
+
+.card-body a{
+  margin-right: 0.5rem;
+}
